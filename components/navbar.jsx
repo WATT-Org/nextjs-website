@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -115,7 +114,13 @@ function DrawerAppBar(props) {
           className="backdrop-blur-lg"
         >
           <Toolbar>
-            <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: "none" } }}            >
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
               <MenuIcon />
             </IconButton>
             <Typography
@@ -129,19 +134,18 @@ function DrawerAppBar(props) {
               }}
             >
               <div className="flex">
-
-              <Link href="/">
+                <Link href="/">
                   <Image
                     src={"/assets/images/logo.png"}
                     width={40}
                     height={40}
                     alt="WATT logo"
                   />
-              </Link>
-                  <span className="ml-2 mt-1 text-2xl font-semibold whitespace-wrap text-white">
-                    WATT
-                  </span>
-                    </div>
+                </Link>
+                <span className="ml-2 mt-1 text-2xl font-semibold whitespace-wrap text-white">
+                  WATT
+                </span>
+              </div>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
